@@ -1,0 +1,207 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  header {
+    text-align: center;
+    padding: 50px 20px;
+    animation: fadeInDown 1s ease-in-out;
+  }
+  
+  header h1 {
+    font-size: 48px;
+    margin: 0;
+    animation: glow 2s infinite alternate;
+  }
+  
+  header p {
+    font-size: 18px;
+    margin: 10px 0 0;
+    opacity: 0.8;
+  }
+  
+  main {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation: fadeInUp 1s ease-in-out;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .password-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  #passwordOutput {
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    background: transparent;
+    color: #fff;
+    text-align: center;
+    cursor: not-allowed;
+  }
+  
+  #copy-btn {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #copy-btn:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .options {
+    /* text-align: left; */
+    margin-bottom: 10px;
+      }
+  
+  .options label {
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    opacity: 0.9;
+  }
+  
+  .options input[type="number"] {
+    margin-bottom: 10px;
+    font-size: 16px;
+    width: 100px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+  
+  .checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 16px;
+  }
+  
+  #generate-btn {
+    background: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  #generate-btn:hover {
+    background: #ff3b2f;
+    transform: scale(1);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    opacity: 0.7;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  /* Animations */
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes glow {
+    0% {
+      text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+      text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 30px rgba(255, 255, 255, 0.6);
+    }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 36px;
+    }
+  
+    header p {
+      font-size: 16px;
+    }
+  
+    #password-output {
+      font-size: 16px;
+    }
+  
+    .options label {
+      font-size: 14px;
+    }
+  
+    #generate-btn {
+      font-size: 16px;
+      padding: 12px 18px;
+    }
+  }
