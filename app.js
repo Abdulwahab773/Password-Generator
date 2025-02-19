@@ -35,11 +35,11 @@ function generatePass() {
     for (let i = pass.length; i < passLength; i++) {
         pass += characters[Math.floor(Math.random() * characters.length)];
     }
-
     if (characters.length === 0) {
         alert("Please Select Any one option");
-        return
+        return;
     }
+    
     passwordOutput.value = pass;
 }
 
